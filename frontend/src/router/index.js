@@ -1,24 +1,22 @@
+// src/router/index.js
 import Vue from "vue";
 import VueRouter from "vue-router";
+import TaskManager from "../components/TaskManager.vue";
 
 Vue.use(VueRouter);
 
-const indexRoutes = [
+const routes = [
   {
-    path: "/",
-    component: () => import("@/views/About.vue"),
-    name: "About",
-    props: {
-      title: "I'm Programmer",
-    },
-    meta: {
-      name: "about page",
-    },
+    path: "/tasks",
+    name: "TaskManager",
+    component: TaskManager,
   },
+  // Route lainnya bisa ditambahkan di sini
 ];
+
 const router = new VueRouter({
   mode: "history",
-  routes: indexRoutes,
+  routes,
 });
 
 export default router;

@@ -15,6 +15,7 @@ class tasks extends Sequelize.Model {
         id: {
           type: DataTypes.INTEGER.UNSIGNED,
           allowNull: false,
+          autoIncrement: true,
           primaryKey: true,
         },
         title: {
@@ -33,10 +34,6 @@ class tasks extends Sequelize.Model {
           type: DataTypes.BOOLEAN,
           allowNull: true,
           defaultValue: 0,
-        },
-        completed_at: {
-          type: DataTypes.DATE,
-          allowNull: true,
         },
       },
       {
